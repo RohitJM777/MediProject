@@ -1,0 +1,97 @@
+# ---------------------------------------
+# Node.js
+# ---------------------------------------
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+pnpm-debug.log
+dist/
+build/
+.cache/
+
+# ---------------------------------------
+# Environment Variables
+# ---------------------------------------
+.env
+.env.*.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Do NOT commit actual secrets
+*.env
+
+# ---------------------------------------
+# Logs
+# ---------------------------------------
+logs/
+*.log
+logfile
+debug.log
+
+# PM2 logs
+.pids
+*.pid
+*.seed
+
+# ---------------------------------------
+# Docker
+# ---------------------------------------
+docker-compose.override.yml
+docker-data/
+docker-volume/
+.docker/
+**/data/
+**/tmp/
+
+# Ignore Mongo & Redis volumes
+mongo-data/
+redis-data/
+data/
+volumes/
+**/mongodb/
+**/redis/
+
+# ---------------------------------------
+# OS / Editor Files
+# ---------------------------------------
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ---------------------------------------
+# Uploads
+# ---------------------------------------
+uploads/
+public/uploads/
+storage/
+temp/
+tmp/
+
+# ---------------------------------------
+# Build Output (Frontend React)
+# ---------------------------------------
+frontend/node_modules/
+frontend/build/
+frontend/.cache/
+*.tsbuildinfo
+
+# ---------------------------------------
+# TypeScript
+# ---------------------------------------
+*.tsbuildinfo
+
+# ---------------------------------------
+# Misc
+# ---------------------------------------
+coverage/
+.libs/
+.eslintcache
+.parcel-cache/
+.next/
+out/
