@@ -1,0 +1,14 @@
+[
+  {
+    "name": "City Pharmacy",
+    "address": "MG Road, Bengaluru",
+    "location": { "type": "Point", "coordinates": [77.5946, 12.9716] },
+    "phone": "+919876543210"
+  },
+  {
+    "name": "Green Health Pharma",
+    "address": "HSR Layout",
+    "location": { "type": "Point", "coordinates": [77.6410, 12.9110] },
+    "phone": "+919123456789"
+  }
+]

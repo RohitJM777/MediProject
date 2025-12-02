@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  core-mongo:
+    image: mongo:6
+    container_name: medichain-core-mongo
+    restart: always
+    ports:
+      - "27018:27017"
+    environment:
+      MONGO_INITDB_DATABASE: medichain_core
+    volumes:
+      - core_mongo_data:/data/db
+
+volumes:
+  core_mongo_data:

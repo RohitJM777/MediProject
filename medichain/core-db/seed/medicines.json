@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Paracetamol 650mg",
+    "brand": "Acme",
+    "description": "Pain & fever relief",
+    "category": "analgesic",
+    "price": 30,
+    "packSize": "10 tablets"
+  },
+  {
+    "name": "Amoxicillin 500mg",
+    "brand": "BioPharm",
+    "description": "Antibiotic",
+    "category": "antibiotic",
+    "price": 120,
+    "packSize": "10 capsules"
+  },
+  {
+    "name": "Cetirizine 10mg",
+    "brand": "AllerFree",
+    "description": "Anti-allergy tablet",
+    "category": "antihistamine",
+    "price": 45,
+    "packSize": "10 tablets"
+  }
+]

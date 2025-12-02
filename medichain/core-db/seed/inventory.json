@@ -1,0 +1,20 @@
+[
+  {
+    "pharmacyName": "City Pharmacy",
+    "medicineName": "Paracetamol 650mg",
+    "stock": 50,
+    "reorderLevel": 10
+  },
+  {
+    "pharmacyName": "City Pharmacy",
+    "medicineName": "Amoxicillin 500mg",
+    "stock": 0,
+    "reorderLevel": 5
+  },
+  {
+    "pharmacyName": "Green Health Pharma",
+    "medicineName": "Cetirizine 10mg",
+    "stock": 30,
+    "reorderLevel": 8
+  }
+]
