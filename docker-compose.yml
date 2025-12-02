@@ -1,4 +1,7 @@
+
+
 services:
+  # ================= Auth Service =================
   auth:
     build: ./medichain/auth-service
     container_name: medichain-auth
@@ -9,21 +12,74 @@ services:
       - mongo
       - redis
       - rabbitmq
+    restart: always
 
+  # ================= Order Service =================
+  order:
+    build: ./medichain/order-service
+    container_name: medichain-order
+    env_file: ./medichain/order-service/.env
+    ports:
+      - "4001:4001"
+    depends_on:
+      - mongo
+      - rabbitmq
+    restart: always
+
+  # ================= Notification Service =================
+  notification:
+    build: ./medichain/notification-service
+    container_name: medichain-notification
+    env_file: ./medichain/notification-service/.env
+    ports:
+      - "4002:4002"
+    depends_on:
+      - rabbitmq
+    restart: always
+
+  # ================= Pharmacist Service =================
+  # pharmacist:
+  #   build: ./medichain/pharmacist-service
+  #   container_name: medichain-pharmacist
+  #   env_file: ./medichain/pharmacist-service/.env
+  #   ports:
+  #     - "4003:4003"
+  #   depends_on:
+  #     - mongo
+  #     - rabbitmq
+  #   restart: always
+
+  # ================= AI Service =================
+  # ai:
+  #   build: ./medichain/ai-service
+  #   container_name: medichain-ai
+  #   env_file: ./medichain/ai-service/.env
+  #   ports:
+  #     - "4004:4004"
+  #   depends_on:
+  #     - mongo
+  #     - order
+  #   restart: always
+
+  # ================= MongoDB =================
   mongo:
     image: mongo:6
-    container_name: medichain-auth-mongo
+    container_name: medichain-mongo
     ports:
       - "27017:27017"
     volumes:
       - mongo-data:/data/db
+    restart: always
 
+  # ================= Redis =================
   redis:
     image: redis:7
     container_name: medichain-redis
     ports:
       - "6379:6379"
+    restart: always
 
+  # ================= RabbitMQ =================
   rabbitmq:
     image: rabbitmq:3-management
     container_name: medichain-rabbitmq
@@ -33,6 +89,7 @@ services:
     environment:
       RABBITMQ_DEFAULT_USER: guest
       RABBITMQ_DEFAULT_PASS: guest
+    restart: always
 
 volumes:
   mongo-data:
